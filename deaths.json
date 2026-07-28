@@ -1,735 +1,1274 @@
 {
-    "wars": [
-        
+"metadata": {
+"databaseName": "WarStats Global Conflict Database",
+"version": "2.0.0",
+"lastUpdated": "2026-07-28",
+"description": "Structured historical database of wars, armed conflicts, rebellions, civil wars, genocides, occupations, and related historical conflicts.",
+"currency": "USD",
+"casualtyUnit": "persons",
+"dataStatus": "Foundational dataset",
+"methodology": {
+"description": "Statistics are estimates and may vary substantially by source. Unknown values are represented as null rather than fabricated.",
+"confidenceLevels": [
+"high",
+"medium",
+"low",
+"disputed",
+"unknown"
+]
+}
+},
+
+```
+"wars": [
+
     {
+        "id": "world-war-i",
         "name": "World War I",
-        "deaths": 20000000,
-        "combatants": [
-            "Allied Powers",
-            "France",
-            "British Empire",
-            "United Kingdom",
-            "Russia",
-            "Italy",
-            "United States",
-            "Japan",
-            "Serbia",
-            "Belgium",
-            "Romania",
-            "Greece",
-            "Portugal",
-            "Montenegro",
-            "Central Powers",
-            "Germany",
-            "Austria-Hungary",
-            "Ottoman Empire",
-            "Bulgaria"
-        ]
+        "alternateNames": [
+            "First World War",
+            "Great War",
+            "WWI"
+        ],
+
+        "classification": {
+            "type": "world_war",
+            "era": "modern",
+            "region": "global",
+            "scope": "global",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": "1914-07-28",
+            "end": "1918-11-11",
+            "durationDays": null,
+            "durationYears": 4
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Europe",
+                "Middle East",
+                "Africa",
+                "Asia",
+                "Atlantic Ocean"
+            ],
+            "countriesAffected": [],
+            "coordinates": null,
+            "mapDataId": "world-war-i"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "allied-powers",
+                    "name": "Allied Powers",
+                    "members": [
+                        "France",
+                        "British Empire",
+                        "United Kingdom",
+                        "Russia",
+                        "Italy",
+                        "United States",
+                        "Japan",
+                        "Serbia",
+                        "Belgium",
+                        "Romania",
+                        "Greece",
+                        "Portugal",
+                        "Montenegro"
+                    ]
+                },
+                {
+                    "id": "central-powers",
+                    "name": "Central Powers",
+                    "members": [
+                        "Germany",
+                        "Austria-Hungary",
+                        "Ottoman Empire",
+                        "Bulgaria"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 20000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [
+            {
+                "id": "world-war-i-eastern-front",
+                "name": "World War I — Eastern Front"
+            },
+            {
+                "id": "world-war-i-western-front",
+                "name": "World War I — Western Front"
+            }
+        ],
+
+        "relatedConflicts": [],
+
+        "sources": []
     },
+
+
     {
+        "id": "world-war-ii",
         "name": "World War II",
-        "deaths": 70000000,
-        "combatants": [
-            "Allied Powers",
-            "United States",
-            "Soviet Union",
-            "United Kingdom",
-            "British Empire",
-            "China",
-            "France",
-            "Free France",
-            "Poland",
-            "Canada",
-            "Australia",
-            "New Zealand",
-            "India",
-            "South Africa",
-            "Yugoslavia",
-            "Greece",
-            "Norway",
-            "Netherlands",
-            "Belgium",
-            "Czechoslovakia",
-            "Brazil",
-            "Mexico",
-            "Philippines",
-            "Ethiopia",
-            "Axis Powers",
-            "Germany",
-            "Italy",
-            "Japan",
-            "Hungary",
-            "Romania",
-            "Bulgaria",
-            "Slovakia",
-            "Croatia",
-            "Finland"
-        ]
+        "alternateNames": [
+            "Second World War",
+            "WWII"
+        ],
+
+        "classification": {
+            "type": "world_war",
+            "era": "modern",
+            "region": "global",
+            "scope": "global",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": "1939-09-01",
+            "end": "1945-09-02",
+            "durationDays": null,
+            "durationYears": 6
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Europe",
+                "Asia",
+                "Africa",
+                "Pacific",
+                "Atlantic",
+                "Mediterranean"
+            ],
+            "countriesAffected": [],
+            "coordinates": null,
+            "mapDataId": "world-war-ii"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "allied-powers",
+                    "name": "Allied Powers",
+                    "members": [
+                        "United States",
+                        "Soviet Union",
+                        "United Kingdom",
+                        "British Empire",
+                        "China",
+                        "France",
+                        "Free France",
+                        "Poland",
+                        "Canada",
+                        "Australia",
+                        "New Zealand",
+                        "India",
+                        "South Africa",
+                        "Yugoslavia",
+                        "Greece",
+                        "Norway",
+                        "Netherlands",
+                        "Belgium",
+                        "Czechoslovakia",
+                        "Brazil",
+                        "Mexico",
+                        "Philippines",
+                        "Ethiopia"
+                    ]
+                },
+                {
+                    "id": "axis-powers",
+                    "name": "Axis Powers",
+                    "members": [
+                        "Germany",
+                        "Italy",
+                        "Japan",
+                        "Hungary",
+                        "Romania",
+                        "Bulgaria",
+                        "Slovakia",
+                        "Croatia",
+                        "Finland"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 70000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": true
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [
+            {
+                "id": "world-war-ii-eastern-front",
+                "name": "World War II — Eastern Front"
+            },
+            {
+                "id": "world-war-ii-pacific-theater",
+                "name": "World War II — Pacific Theater"
+            },
+            {
+                "id": "world-war-ii-china-theater",
+                "name": "World War II — China Theater"
+            }
+        ],
+
+        "relatedConflicts": [],
+
+        "sources": []
     },
+
+
     {
+        "id": "vietnam-war",
         "name": "Vietnam War",
-        "deaths": 3000000,
-        "combatants": [
-            "North Vietnam",
-            "Viet Cong",
-            "South Vietnam",
-            "United States",
-            "South Korea",
-            "Australia",
-            "New Zealand",
-            "Thailand",
-            "Philippines",
-            "China",
-            "Soviet Union",
-            "North Korea"
-        ]
+        "alternateNames": [
+            "Second Indochina War"
+        ],
+
+        "classification": {
+            "type": "international_conflict",
+            "era": "modern",
+            "region": "southeast_asia",
+            "scope": "regional",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": "1955-01-01",
+            "end": "1975-04-30",
+            "durationDays": null,
+            "durationYears": 20
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Vietnam",
+                "Laos",
+                "Cambodia",
+                "Southeast Asia"
+            ],
+            "countriesAffected": [],
+            "coordinates": null,
+            "mapDataId": "vietnam-war"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "communist-forces",
+                    "name": "Communist Forces",
+                    "members": [
+                        "North Vietnam",
+                        "Viet Cong",
+                        "China",
+                        "Soviet Union",
+                        "North Korea"
+                    ]
+                },
+                {
+                    "id": "anti-communist-forces",
+                    "name": "Anti-Communist Forces",
+                    "members": [
+                        "South Vietnam",
+                        "United States",
+                        "South Korea",
+                        "Australia",
+                        "New Zealand",
+                        "Thailand",
+                        "Philippines"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 3000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
     },
+
+
     {
+        "id": "korean-war",
         "name": "Korean War",
-        "deaths": 3500000,
-        "combatants": [
-            "North Korea",
-            "South Korea",
-            "United States",
-            "China",
-            "Soviet Union",
-            "United Kingdom",
-            "Canada",
-            "Australia",
-            "Turkey",
-            "France",
-            "Philippines",
-            "Thailand",
-            "Netherlands",
-            "Greece",
-            "New Zealand",
-            "South Africa",
-            "Belgium",
-            "Luxembourg",
-            "Colombia",
-            "Ethiopia"
-        ]
+        "alternateNames": [],
+
+        "classification": {
+            "type": "international_conflict",
+            "era": "modern",
+            "region": "east_asia",
+            "scope": "regional",
+            "status": "armistice"
+        },
+
+        "dates": {
+            "start": "1950-06-25",
+            "end": "1953-07-27",
+            "durationDays": null,
+            "durationYears": 3
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Korean Peninsula",
+                "East Asia"
+            ],
+            "countriesAffected": [],
+            "coordinates": null,
+            "mapDataId": "korean-war"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "north-korea-allies",
+                    "name": "North Korea and Allies",
+                    "members": [
+                        "North Korea",
+                        "China",
+                        "Soviet Union"
+                    ]
+                },
+                {
+                    "id": "un-command",
+                    "name": "United Nations Command",
+                    "members": [
+                        "South Korea",
+                        "United States",
+                        "United Kingdom",
+                        "Canada",
+                        "Australia",
+                        "Turkey",
+                        "France",
+                        "Philippines",
+                        "Thailand",
+                        "Netherlands",
+                        "Greece",
+                        "New Zealand",
+                        "South Africa",
+                        "Belgium",
+                        "Luxembourg",
+                        "Colombia",
+                        "Ethiopia"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 3500000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
     },
-        
-        {
-            "name": "American Civil War",
-            "deaths": 620000,
-            "combatants": [
-                "Union", 
-                "Confederacy"
-            ]
+
+
+    {
+        "id": "american-civil-war",
+        "name": "American Civil War",
+        "alternateNames": [],
+
+        "classification": {
+            "type": "civil_war",
+            "era": "modern",
+            "region": "north_america",
+            "scope": "national",
+            "status": "ended"
         },
-        {
-            "name": "Napoleonic Wars",
-            "deaths": 6000000,
-            "combatants": [
-                "France", 
-                "United Kingdom", 
-                "Prussia", 
-                "Russia", 
-                "Austria"
-            ]
+
+        "dates": {
+            "start": "1861-04-12",
+            "end": "1865-05-26",
+            "durationDays": null,
+            "durationYears": 4
         },
-        {
-            "name": "Chinese Civil War",
-            "deaths": 8000000,
-            "combatants": [
-                "Chinese Communist Party", 
-                "Nationalist Party (Kuomintang)"
-            ]
-        },
-        {
-            "name": "Iraq War",
-            "deaths": 2000000,
-            "combatants": [
-                "Iraq", 
-                "United States", 
-                "Coalition Forces"
-            ]
-        },
-        {
-            "name": "Afghan Civil War",
-            "deaths": 1500000,
-            "combatants": [
-                "Taliban", 
-                "Northern Alliance", 
+
+        "geography": {
+            "primaryRegions": [
+                "United States",
+                "North America"
+            ],
+            "countriesAffected": [
                 "United States"
-            ]
+            ],
+            "coordinates": null,
+            "mapDataId": "american-civil-war"
         },
-        {
-            "name": "Rwandan Civil War",
-            "deaths": 1000000,
-            "combatants": [
-                "Rwandan Patriotic Front", 
-                "Rwandan Government Forces"
-            ]
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "union",
+                    "name": "Union",
+                    "members": [
+                        "United States"
+                    ]
+                },
+                {
+                    "id": "confederacy",
+                    "name": "Confederacy",
+                    "members": [
+                        "Confederate States of America"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
         },
-        {
-            "name": "Bosnian War",
-            "deaths": 100000,
-            "combatants": [
-                "Bosniaks", 
-                "Serbs", 
-                "Croats"
-            ]
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 620000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
         },
-        {
-            "name": "Syrian Civil War",
-            "deaths": 500000,
-            "combatants": [
-                "Syrian Government", 
-                "Syrian Rebels", 
-                "ISIS", 
-                "Kurds", 
-                "Russia", 
-                "United States"
-            ]
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
         },
-        {
-            "name": "Chilean Civil War",
-            "deaths": 250000,
-            "combatants": [
-                "Liberals", 
-                "Conservatives"
-            ]
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
         },
-        {
-            "name": "Second Sudanese Civil War",
-            "deaths": 2000000,
-            "combatants": [
-                "Sudanese Government", 
-                "Sudanese People's Liberation Army"
-            ]
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
         },
-        {
-            "name": "Yugoslav Wars",
-            "deaths": 1400000,
-            "combatants": [
-                "Bosnian Serbs", 
-                "Croats", 
-                "Bosniaks", 
-                "Serbs"
-            ]
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
         },
-        {
-            "name": "Iran-Iraq War",
-            "deaths": 1000000,
-            "combatants": [
-                "Iran", 
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
+    },
+
+
+    {
+        "id": "napoleonic-wars",
+        "name": "Napoleonic Wars",
+        "alternateNames": [],
+
+        "classification": {
+            "type": "coalition_wars",
+            "era": "early_modern",
+            "region": "europe",
+            "scope": "international",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": null,
+            "end": null,
+            "durationDays": null,
+            "durationYears": null
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Europe"
+            ],
+            "countriesAffected": [],
+            "coordinates": null,
+            "mapDataId": "napoleonic-wars"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "french-empire",
+                    "name": "French Empire",
+                    "members": [
+                        "France"
+                    ]
+                },
+                {
+                    "id": "coalition-powers",
+                    "name": "Coalition Powers",
+                    "members": [
+                        "United Kingdom",
+                        "Prussia",
+                        "Russia",
+                        "Austria"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 6000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
+    },
+
+
+    {
+        "id": "chinese-civil-war",
+        "name": "Chinese Civil War",
+        "alternateNames": [],
+
+        "classification": {
+            "type": "civil_war",
+            "era": "modern",
+            "region": "east_asia",
+            "scope": "national",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": null,
+            "end": null,
+            "durationDays": null,
+            "durationYears": null
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "China",
+                "East Asia"
+            ],
+            "countriesAffected": [
+                "China"
+            ],
+            "coordinates": null,
+            "mapDataId": "chinese-civil-war"
+        },
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "chinese-communist-party",
+                    "name": "Chinese Communist Party",
+                    "members": [
+                        "Chinese Communist Party"
+                    ]
+                },
+                {
+                    "id": "kuomintang",
+                    "name": "Nationalist Party",
+                    "members": [
+                        "Nationalist Party (Kuomintang)"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
+        },
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 8000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
+        },
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
+        },
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
+        },
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
+        },
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
+        },
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
+    },
+
+
+    {
+        "id": "iraq-war",
+        "name": "Iraq War",
+        "alternateNames": [],
+
+        "classification": {
+            "type": "international_conflict",
+            "era": "contemporary",
+            "region": "middle_east",
+            "scope": "regional",
+            "status": "ended"
+        },
+
+        "dates": {
+            "start": null,
+            "end": null,
+            "durationDays": null,
+            "durationYears": null
+        },
+
+        "geography": {
+            "primaryRegions": [
+                "Iraq",
+                "Middle East"
+            ],
+            "countriesAffected": [
                 "Iraq"
-            ]
+            ],
+            "coordinates": null,
+            "mapDataId": "iraq-war"
         },
-        {
-            "name": "Gulf War",
-            "deaths": 250000,
-            "combatants": [
-                "Iraq", 
-                "United States", 
-                "Coalition Forces"
-            ]
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "coalition-forces",
+                    "name": "Coalition Forces",
+                    "members": [
+                        "United States",
+                        "Coalition Forces"
+                    ]
+                },
+                {
+                    "id": "iraqi-forces",
+                    "name": "Iraqi Forces",
+                    "members": [
+                        "Iraq"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
         },
-        {
-            "name": "Spanish Civil War",
-            "deaths": 500000,
-            "combatants": [
-                "Republicans", 
-                "Nationalists"
-            ]
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 2000000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
         },
-        {
-            "name": "War in Darfur",
-            "deaths": 300000,
-            "combatants": [
-                "Sudanese Government", 
-                "Rebel Groups"
-            ]
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
         },
-        {
-            "name": "Russo-Turkish War",
-            "deaths": 500000,
-            "combatants": [
-                "Russian Empire", 
-                "Ottoman Empire"
-            ]
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
         },
-        {
-            "name": "War of the Spanish Succession",
-            "deaths": 1000000,
-            "combatants": [
-                "Great Britain", 
-                "France", 
-                "Spain", 
-                "Austria", 
-                "Dutch Republic"
-            ]
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
         },
-        {
-            "name": "Second Sino-Japanese War",
-            "deaths": 25000000,
-            "combatants": [
-                "China", 
-                "Japan"
-            ]
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
         },
-        {
-            "name": "Taiping Rebellion",
-            "deaths": 20000000,
-            "combatants": [
-                "Taiping Heavenly Kingdom", 
-                "Qing Dynasty"
-            ]
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
+    },
+
+
+    {
+        "id": "afghan-civil-war",
+        "name": "Afghan Civil War",
+        "alternateNames": [],
+
+        "classification": {
+            "type": "civil_war",
+            "era": "contemporary",
+            "region": "central_asia",
+            "scope": "national",
+            "status": "ended"
         },
-        {
-            "name": "World War II (China theater)",
-            "deaths": 20000000,
-            "combatants": [
-                "China", 
-                "Japan"
-            ]
+
+        "dates": {
+            "start": null,
+            "end": null,
+            "durationDays": null,
+            "durationYears": null
         },
-        {
-            "name": "Holocaust",
-            "deaths": 6000000,
-            "combatants": [
-                "Nazi Germany", 
-                "Jewish People", 
-                "Other Victimized Groups"
-            ]
+
+        "geography": {
+            "primaryRegions": [
+                "Afghanistan",
+                "Central Asia"
+            ],
+            "countriesAffected": [
+                "Afghanistan"
+            ],
+            "coordinates": null,
+            "mapDataId": "afghan-civil-war"
         },
-        {
-            "name": "Congo Civil War",
-            "deaths": 5000000,
-            "combatants": [
-                "Congolese Government", 
-                "Rebel Groups", 
-                "Foreign Military Intervention"
-            ]
+
+        "combatants": {
+            "alliances": [
+                {
+                    "id": "taliban",
+                    "name": "Taliban",
+                    "members": [
+                        "Taliban"
+                    ]
+                },
+                {
+                    "id": "northern-alliance",
+                    "name": "Northern Alliance",
+                    "members": [
+                        "Northern Alliance"
+                    ]
+                },
+                {
+                    "id": "international-forces",
+                    "name": "International Forces",
+                    "members": [
+                        "United States"
+                    ]
+                }
+            ],
+            "factions": [],
+            "neutralStates": []
         },
-        {
-            "name": "An Lushan Rebellion",
-            "deaths": 13000000,
-            "combatants": [
-                "Tang Dynasty", 
-                "An Lushan's Rebellion Forces"
-            ]
+
+        "casualties": {
+            "totalDeaths": {
+                "estimate": 1500000,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "militaryDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "civilianDeaths": {
+                "estimate": null,
+                "low": null,
+                "high": null,
+                "confidence": "unknown"
+            },
+            "wounded": null,
+            "missing": null,
+            "prisonersOfWar": null,
+            "refugees": null,
+            "displacedPersons": null
         },
-        {
-            "name": "Russian Civil War",
-            "deaths": 7000000,
-            "combatants": [
-                "Bolsheviks", 
-                "White Army", 
-                "Various Factions"
-            ]
+
+        "economics": {
+            "militarySpendingUSD": null,
+            "totalWarCostUSD": null,
+            "economicDamageUSD": null,
+            "infrastructureDamageUSD": null,
+            "reconstructionCostUSD": null,
+            "gdpImpact": null,
+            "inflationImpact": null
         },
-        {
-            "name": "Bengal Famine of 1943",
-            "deaths": 3000000,
-            "combatants": [
-                "British Empire", 
-                "Bengali Population"
-            ]
+
+        "funding": {
+            "domesticTaxationUSD": null,
+            "warBondsUSD": null,
+            "governmentDebtUSD": null,
+            "foreignLoansUSD": null,
+            "foreignAidUSD": null,
+            "resourceExtractionUSD": null,
+            "otherFundingUSD": null
         },
-        {
-            "name": "Indo-Pakistani War of 1971",
-            "deaths": 3000000,
-            "combatants": [
-                "India", 
-                "Pakistan", 
-                "Bangladesh"
-            ]
+
+        "military": {
+            "mobilizedPersonnel": null,
+            "peakActivePersonnel": null,
+            "militaryBranches": [],
+            "majorWeapons": [],
+            "militaryTechnology": [],
+            "nuclearWeaponsUsed": false
         },
-        {
-            "name": "The Great Chinese Famine",
-            "deaths": 15000000,
-            "combatants": [
-                "People's Republic of China"
-            ]
+
+        "territorialImpact": {
+            "territoriesLost": [],
+            "territoriesGained": [],
+            "countriesCreated": [],
+            "countriesDissolved": [],
+            "borderChanges": []
         },
-        {
-            "name": "Thirty Years' War",
-            "deaths": 8000000,
-            "combatants": [
-                "Holy Roman Empire", 
-                "Sweden", 
-                "France", 
-                "Spain", 
-                "Various German States"
-            ]
-        },
-        {
-            "name": "World War I (Eastern Front)",
-            "deaths": 4000000,
-            "combatants": [
-                "Russia", 
-                "Germany", 
-                "Austria-Hungary", 
-                "Ottoman Empire"
-            ]
-        },
-        {
-            "name": "French Wars of Religion",
-            "deaths": 3000000,
-            "combatants": [
-                "Catholics", 
-                "Huguenots"
-            ]
-        },
-        {
-            "name": "Napoleonic Wars (Peninsular War)",
-            "deaths": 5000000,
-            "combatants": [
-                "France", 
-                "Spain", 
-                "Portugal", 
-                "United Kingdom"
-            ]
-        },
-        {
-            "name": "World War II (Eastern Front)",
-            "deaths": 20000000,
-            "combatants": [
-                "Soviet Union", 
-                "Nazi Germany", 
-                "Axis Powers"
-            ]
-        },
-        {
-            "name": "The Napoleonic Wars (1812-1815)",
-            "deaths": 6000000,
-            "combatants": [
-                "First French Empire (Napoleon Bonaparte)",
-                "United Kingdom", 
-                "Russian Empire", 
-                "Austrian Empire", 
-                "Kingdom of Prussia", 
-                "Sweden", 
-                "Spain", 
-                "Portugal", 
-                "Bavaria", 
-                "Saxony", 
-                "Denmark-Norway",
-                "Various Italian States (Kingdom of Naples, Kingdom of Sardinia)",
-                "Spanish Guerrilla Forces", 
-                "Napoleonic Allies (including Denmark, Norway, and others)"
-            ]
-        },
-        {
-            "name": "The Crimean War (1853–1856)",
-            "deaths": 750000,
-            "combatants": [
-                "Russian Empire", 
-                "Ottoman Empire", 
-                "United Kingdom", 
-                "French Empire", 
-                "Kingdom of Sardinia", 
-                "Various Ottoman Client States"
-            ]
-        },
-        {
-            "name": "The Taiping Rebellion (1850–1864)",
-            "deaths": 20000000,
-            "combatants": [
-                "Taiping Heavenly Kingdom (led by Hong Xiuquan)", 
-                "Qing Dynasty (Manchu Empire)", 
-                "Chinese Imperial Forces", 
-                "Chinese Christian Rebels",
-                "Various Provincial Militias", 
-                "British Forces (Supporting Qing Dynasty)", 
-                "French Forces (Supporting Qing Dynasty)"
-            ]
-        },
-        {
-            "name": "The Spanish Civil War (1936–1939)",
-            "deaths": 500000,
-            "combatants": [
-                "Republican Spain (including Leftist forces, Socialists, Communists, Anarchists, and various regional militias)", 
-                "Nationalist Spain (led by Francisco Franco)",
-                "Fascist Italy (Supporting Nationalists)", 
-                "Nazi Germany (Supporting Nationalists)", 
-                "Soviet Union (Supporting Republicans)", 
-                "International Brigades (Composed of volunteers from various countries)",
-                "Basque Country Forces (aligned with Republicans)", 
-                "Catalan Forces (aligned with Republicans)"
-            ]
-        },
-        {
-            "name": "The Russo-Japanese War (1904–1905)",
-            "deaths": 500000,
-            "combatants": [
-                "Russian Empire", 
-                "Empire of Japan",
-                "Manchukuo (Japanese Puppet State)", 
-                "Chinese Empire (neutral, but affected)",
-                "Various Chinese Militias (affected by battles and occupation)"
-            ]
-        },
-        {
-            "name": "World War I (1914-1918) - Western Front",
-            "deaths": 8000000,
-            "combatants": [
-                "Allied Powers (including France, United Kingdom, Belgium, and later the United States)",
-                "German Empire", 
-                "Austro-Hungarian Empire", 
-                "Ottoman Empire",
-                "Bulgaria",
-                "Various Colonial Troops (from Africa, India, and the Pacific)"
-            ]
-        },
-        {
-            "name": "The Indo-Pakistani War of 1971",
-            "deaths": 3000000,
-            "combatants": [
-                "India", 
-                "East Pakistan (later Bangladesh)", 
-                "West Pakistan (Pakistan Army)", 
-                "Mukhti Bahini (Bangladeshi Freedom Fighters)", 
-                "Indian Army", 
-                "Indian Air Force", 
-                "Indian Navy", 
-                "Pakistani Armed Forces", 
-                "Various Militant Groups within Bangladesh"
-            ]
-        },
-        {
-            "name": "The Korean War (1950-1953)",
-            "deaths": 3500000,
-            "combatants": [
-                "North Korea (Democratic People's Republic of Korea)", 
-                "South Korea (Republic of Korea)", 
-                "United States (United Nations Command)", 
-                "People's Republic of China", 
-                "Soviet Union (Indirect support for North Korea)", 
-                "United Kingdom", 
-                "Canada", 
-                "Australia", 
-                "New Zealand", 
-                "Philippines", 
-                "Thailand", 
-                "South Korean Guerrillas", 
-                "Various North Korean Guerrillas and Partisans"
-            ]
-        },
-        {
-            "name": "World War II (1939–1945) - Pacific Theater",
-            "deaths": 20000000,
-            "combatants": [
-                "Allied Powers (United States, United Kingdom, China, Australia, Canada, New Zealand, India, various Pacific island nations)",
-                "Empire of Japan", 
-                "Japan's Puppet States (Manchukuo, Mengjiang, and others)", 
-                "Axis Powers (Nazi Germany and Italy indirectly supporting Japan)", 
-                "Chinese Nationalist Forces (Kuomintang)", 
-                "Chinese Communist Party (Partisans)"
-            ]
-        },
-        {
-            "name": "The Vietnam War (1955–1975)",
-            "deaths": 3000000,
-            "combatants": [
-                "North Vietnam (Democratic Republic of Vietnam)",
-                "South Vietnam (Republic of Vietnam)", 
-                "United States", 
-                "South Korean Forces", 
-                "Australian and New Zealand Forces", 
-                "Cambodian and Laotian Guerillas", 
-                "Pathet Lao (Laos)", 
-                "Viet Cong", 
-                "Hmong Forces", 
-                "Laotian and Cambodian Communist Forces"
-            ]
-        },
-        {
-            "name": "The Napoleonic Wars (Battle of Leipzig) (1813)",
-            "deaths": 500000,
-            "combatants": [
-                "Napoleonic France (Napoleon Bonaparte)", 
-                "Austria", 
-                "Prussia", 
-                "Russia", 
-                "Sweden", 
-                "Spain", 
-                "Bavaria", 
-                "Saxony", 
-                "Various Allied German States", 
-                "Portuguese Guerrillas"
-            ]
-        },
-        {
-            "name": "The Vietnam War (Indochina War)",
-            "deaths": 5000000,
-            "combatants": [
-                "North Vietnam", 
-                "South Vietnam", 
-                "United States", 
-                "Cambodia", 
-                "Laos"
-            ]
-        },
-        {
-            "name": "Genghis Khan's Conquests",
-            "deaths": 40000000,
-            "combatants": [
-                "Mongol Empire", 
-                "Various Kingdoms and States"
-            ]
-        },
-        {
-            "name": "American Revolutionary War",
-            "deaths": 250000,
-            "combatants": [
-                "Thirteen Colonies", 
-                "Great Britain", 
-                "French Forces"
-            ]
-        },
-        {
-            "name": "Second War of Italian Independence",
-            "deaths": 1000000,
-            "combatants": [
-                "Kingdom of Sardinia", 
-                "Austrian Empire", 
-                "Kingdom of Naples"
-            ]
-        },
-        {
-            "name": "The War of the Austrian Succession (1740–1748)",
-            "deaths": 1000000,
-            "combatants": [
-                "Austria", 
-                "Prussia", 
-                "France", 
-                "Great Britain", 
-                "Dutch Republic", 
-                "Spain", 
-                "Sardinia", 
-                "Bavaria", 
-                "Hanover", 
-                "Portugal"
-            ]
-        },
-        {
-            "name": "The French and Indian War (1754–1763)",
-            "deaths": 700000,
-            "combatants": [
-                "Great Britain", 
-                "France", 
-                "British American Colonies", 
-                "New France", 
-                "Various Native American Tribes (Iroquois Confederacy, Algonquin, Huron, and others)", 
-                "Spanish Empire"
-            ]
-        },
-        {
-            "name": "The Boer War (1899–1902)",
-            "deaths": 70000,
-            "combatants": [
-                "British Empire", 
-                "Boer Republics (South African Republic and Orange Free State)", 
-                "Dutch-descended Afrikaner Settlers", 
-                "Various African Allied Forces", 
-                "Germans (indirect support)"
-            ]
-        },
-        {
-            "name": "The Falklands War (1982)",
-            "deaths": 900,
-            "combatants": [
-                "United Kingdom", 
-                "Argentina", 
-                "Falkland Islanders", 
-                "British Royal Navy", 
-                "Argentine Navy", 
-                "Argentine Army", 
-                "Royal Air Force"
-            ]
-        },
-        {
-            "name": "The Soviet-Afghan War (1979–1989)",
-            "deaths": 2000000,
-            "combatants": [
-                "Soviet Union", 
-                "Afghan Communist Government (People's Democratic Party of Afghanistan)", 
-                "Mujahideen (Afghan Resistance Fighters)", 
-                "United States (CIA, covert support to Mujahideen)", 
-                "Pakistan (ISI support for Mujahideen)", 
-                "Iran (Indirect support to Mujahideen)", 
-                "Various Arab Fighters (e.g., Osama bin Laden’s group)"
-            ]
-        },
-        {
-            "name": "The Rwandan Genocide (1994)",
-            "deaths": 1000000,
-            "combatants": [
-                "Rwandan Patriotic Front (RPF)", 
-                "Rwandan Government Forces", 
-                "Interahamwe (Hutu Militia)", 
-                "United Nations (Peacekeepers)", 
-                "French Forces (Operation Turquoise, supporting government forces)"
-            ]
-        },
-        {
-            "name": "The Iran-Iraq War (1980–1988)",
-            "deaths": 1000000,
-            "combatants": [
-                "Iran", 
-                "Iraq", 
-                "Kurdish Forces in Iraq (Supported by Iran)", 
-                "Various Arab States (Indirect involvement, supporting Iraq)", 
-                "Soviet Union (indirect support to Iraq)", 
-                "United States (Providing intelligence and support to Iraq)"
-            ]
-        },
-        {
-            "name": "The War in Darfur (2003–present)",
-            "deaths": 300000,
-            "combatants": [
-                "Sudanese Government Forces", 
-                "Sudanese Armed Forces", 
-                "Janjaweed Militia (Pro-Government Arab Militia)", 
-                "Sudanese Rebel Groups (e.g., Sudan Liberation Movement, Justice and Equality Movement)", 
-                "African Union Peacekeepers", 
-                "United Nations Peacekeepers", 
-                "Chadian Forces (Involvement in border conflict)"
-            ]
-        },
-        {
-            "name": "The Gulf War (1990–1991)",
-            "deaths": 250000,
-            "combatants": [
-                "Iraq", 
-                "Kuwait", 
-                "United States", 
-                "United Kingdom", 
-                "France", 
-                "Saudi Arabia", 
-                "Bahrain", 
-                "Qatar", 
-                "United Arab Emirates", 
-                "Egypt", 
-                "Syria", 
-                "Turkey", 
-                "Other Coalition Forces", 
-                "Iraqi Kurdish Forces (in rebellion)"
-            ]
-        },
-        {
-            "name": "The Mexican Revolution (1910–1920)",
-            "deaths": 1000000,
-            "combatants": [
-                "Mexican Government Forces (Federal Army)", 
-                "Revolutionary Forces (including Emiliano Zapata, Pancho Villa, Francisco I. Madero)", 
-                "American and European Mercenaries", 
-                "Various local militias and resistance groups", 
-                "German Military (Indirect support)"
-            ]
-        },
-        {
-            "name": "Mughal-Maratha Wars",
-            "deaths": 5000000,
-            "combatants": [
-                "Mughal Empire", 
-                "Maratha Confederacy"
-            ]
-        }
-    ]
+
+        "majorEvents": [],
+
+        "subConflicts": [],
+
+        "relatedConflicts": [],
+
+        "sources": []
+    }
+
+]
+
+
 }

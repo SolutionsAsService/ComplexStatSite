@@ -1,31 +1,1145 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>War Statistics Display</title>
-    <link rel="stylesheet" href="styles.css">
+
+```
+<meta
+    name="description"
+    content="Explore global war statistics, casualties, military spending, war funding, combatants, timelines, and geopolitical impact."
+>
+
+<title>WarStats — Global War Statistics & History</title>
+
+<link rel="stylesheet" href="styles.css">
+```
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>War Statistics Display</h1>
-        
-        <!-- Instructions for selecting a war -->
-        <p>Please select a war from the dropdown menu to view the statistics.</p>
-        
-        <!-- Dropdown for selecting war -->
-        <select id="war-select" onchange="updateCounter()">
-            <option value="">Select a War</option>
-            <!-- Add options dynamically using JavaScript -->
-        </select>
-        
-        <!-- Display the selected war name, deaths, and combatants -->
-        <h2 id="war-name">War: Select a War</h2>
-        <div id="counter">Deaths: 0</div>
-        <h3 id="combatants">Combatants: </h3>
+
+```
+<!-- =========================================================
+     TOP NAVIGATION
+========================================================== -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">WS</span>
+            <span class="logo-text">WAR<span>STATS</span></span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html" class="nav-link active">
+                Overview
+            </a>
+
+            <a href="wars.html" class="nav-link">
+                Wars
+            </a>
+
+            <a href="map.html" class="nav-link">
+                Global Map
+            </a>
+
+            <a href="countries.html" class="nav-link">
+                Countries
+            </a>
+
+            <a href="funding.html" class="nav-link">
+                War Funding
+            </a>
+
+            <a href="timeline.html" class="nav-link">
+                Timeline
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                id="search-button"
+                class="icon-button"
+                aria-label="Search"
+            >
+                Search
+            </button>
+
+            <button
+                id="theme-toggle"
+                class="icon-button"
+                aria-label="Toggle theme"
+            >
+                Theme
+            </button>
+
+        </div>
+
     </div>
 
-    <!-- Link to External JavaScript File -->
-    <script src="script.js"></script>
+</header>
+
+
+<!-- =========================================================
+     MAIN APPLICATION
+========================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =====================================================
+         HERO / GLOBAL OVERVIEW
+    ====================================================== -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                GLOBAL CONFLICT DATABASE
+            </div>
+
+            <h1>
+                The Data Behind
+                <span>Human Conflict</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore centuries of warfare through data.
+                Analyze casualties, combatants, military spending,
+                war funding, territorial change, and the global
+                impact of armed conflict.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="wars.html" class="primary-button">
+                    Explore Wars
+                </a>
+
+                <a href="map.html" class="secondary-button">
+                    Open Global Map
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Global summary statistics -->
+
+        <div class="hero-stat-grid">
+
+            <div class="hero-stat-card">
+
+                <span class="stat-label">
+                    Recorded Conflicts
+                </span>
+
+                <strong id="total-wars">
+                    0
+                </strong>
+
+                <span class="stat-description">
+                    In the global database
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat-card">
+
+                <span class="stat-label">
+                    Estimated Deaths
+                </span>
+
+                <strong id="total-deaths">
+                    0
+                </strong>
+
+                <span class="stat-description">
+                    Military and civilian
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat-card">
+
+                <span class="stat-label">
+                    Countries Involved
+                </span>
+
+                <strong id="total-countries">
+                    0
+                </strong>
+
+                <span class="stat-description">
+                    Across recorded conflicts
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat-card">
+
+                <span class="stat-label">
+                    Estimated War Costs
+                </span>
+
+                <strong id="total-war-cost">
+                    $0
+                </strong>
+
+                <span class="stat-description">
+                    Historical estimates
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GLOBAL WAR MAP
+    ====================================================== -->
+
+    <section class="dashboard-section map-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    GEOPOLITICAL OVERVIEW
+                </span>
+
+                <h2>
+                    Global Conflict Map
+                </h2>
+
+                <p>
+                    Explore where conflicts occurred and how warfare
+                    spread across regions and historical periods.
+                </p>
+
+            </div>
+
+            <a href="map.html" class="section-link">
+                View Full Map →
+            </a>
+
+        </div>
+
+
+        <div class="map-dashboard">
+
+            <!-- Map will be rendered here with JavaScript -->
+
+            <div id="world-map" class="world-map">
+
+                <div class="map-placeholder">
+
+                    <span class="map-icon">
+                        MAP
+                    </span>
+
+                    <h3>
+                        Interactive World Map
+                    </h3>
+
+                    <p>
+                        Select a country or conflict to explore
+                        historical warfare data.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Map controls -->
+
+            <aside class="map-controls">
+
+                <h3>
+                    Map Filters
+                </h3>
+
+                <label for="map-era">
+                    Historical Era
+                </label>
+
+                <select id="map-era">
+
+                    <option value="all">
+                        All Eras
+                    </option>
+
+                    <option value="ancient">
+                        Ancient
+                    </option>
+
+                    <option value="medieval">
+                        Medieval
+                    </option>
+
+                    <option value="early-modern">
+                        Early Modern
+                    </option>
+
+                    <option value="modern">
+                        Modern
+                    </option>
+
+                    <option value="contemporary">
+                        Contemporary
+                    </option>
+
+                </select>
+
+
+                <label for="map-conflict-type">
+                    Conflict Type
+                </label>
+
+                <select id="map-conflict-type">
+
+                    <option value="all">
+                        All Conflicts
+                    </option>
+
+                    <option value="international">
+                        International Wars
+                    </option>
+
+                    <option value="civil">
+                        Civil Wars
+                    </option>
+
+                    <option value="revolution">
+                        Revolutions
+                    </option>
+
+                    <option value="colonial">
+                        Colonial Conflicts
+                    </option>
+
+                    <option value="religious">
+                        Religious Conflicts
+                    </option>
+
+                </select>
+
+
+                <div class="map-legend">
+
+                    <h4>
+                        Conflict Intensity
+                    </h4>
+
+                    <div class="legend-item">
+                        <span class="legend-dot low"></span>
+                        Low
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-dot medium"></span>
+                        Medium
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-dot high"></span>
+                        High
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-dot extreme"></span>
+                        Extreme
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FEATURED CONFLICT
+    ====================================================== -->
+
+    <section class="dashboard-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    FEATURED CONFLICT
+                </span>
+
+                <h2>
+                    Explore a War
+                </h2>
+
+            </div>
+
+            <a href="wars.html" class="section-link">
+                Browse Database →
+            </a>
+
+        </div>
+
+
+        <div class="war-explorer">
+
+            <div class="war-selector-panel">
+
+                <label for="war-select">
+                    Select a conflict
+                </label>
+
+                <select id="war-select">
+
+                    <option value="">
+                        Select a War
+                    </option>
+
+                </select>
+
+
+                <div class="war-search">
+
+                    <input
+                        type="search"
+                        id="war-search"
+                        placeholder="Search wars..."
+                    >
+
+                    <button id="war-search-button">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="war-details" class="war-details">
+
+                <div class="empty-state">
+
+                    <h3>
+                        Select a conflict
+                    </h3>
+
+                    <p>
+                        Choose a war from the database to view
+                        detailed historical and statistical data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GLOBAL WAR STATISTICS
+    ====================================================== -->
+
+    <section class="dashboard-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    GLOBAL ANALYTICS
+                </span>
+
+                <h2>
+                    War by the Numbers
+                </h2>
+
+                <p>
+                    Compare the scale and impact of conflicts
+                    throughout history.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-grid">
+
+
+            <!-- Casualties -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <span>
+                        CASUALTIES
+                    </span>
+
+                    <button class="card-menu">
+                        View
+                    </button>
+
+                </div>
+
+                <div class="card-value">
+                    <span id="global-deaths">
+                        0
+                    </span>
+                </div>
+
+                <p>
+                    Estimated deaths across recorded conflicts.
+                </p>
+
+                <div
+                    id="casualty-chart"
+                    class="chart-container"
+                >
+                </div>
+
+            </article>
+
+
+            <!-- Military Deaths -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <span>
+                        MILITARY DEATHS
+                    </span>
+
+                </div>
+
+                <div class="card-value">
+                    <span id="military-deaths">
+                        0
+                    </span>
+                </div>
+
+                <p>
+                    Estimated combatant fatalities.
+                </p>
+
+                <div
+                    id="military-chart"
+                    class="chart-container"
+                >
+                </div>
+
+            </article>
+
+
+            <!-- Civilian Deaths -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <span>
+                        CIVILIAN IMPACT
+                    </span>
+
+                </div>
+
+                <div class="card-value">
+                    <span id="civilian-deaths">
+                        0
+                    </span>
+                </div>
+
+                <p>
+                    Estimated civilian fatalities.
+                </p>
+
+                <div
+                    id="civilian-chart"
+                    class="chart-container"
+                >
+                </div>
+
+            </article>
+
+
+            <!-- War Costs -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <span>
+                        ECONOMIC COST
+                    </span>
+
+                </div>
+
+                <div class="card-value">
+                    <span id="economic-cost">
+                        $0
+                    </span>
+                </div>
+
+                <p>
+                    Estimated direct and indirect economic costs.
+                </p>
+
+                <div
+                    id="economic-chart"
+                    class="chart-container"
+                >
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WAR FUNDING
+    ====================================================== -->
+
+    <section class="dashboard-section funding-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    WAR ECONOMICS
+                </span>
+
+                <h2>
+                    Who Pays for War?
+                </h2>
+
+                <p>
+                    Explore how wars are financed through national
+                    budgets, taxation, debt, foreign aid, loans,
+                    resource extraction, and external funding.
+                </p>
+
+            </div>
+
+            <a href="funding.html" class="section-link">
+                Explore War Funding →
+            </a>
+
+        </div>
+
+
+        <div class="funding-grid">
+
+
+            <article class="funding-card">
+
+                <span class="funding-label">
+                    MILITARY EXPENDITURE
+                </span>
+
+                <strong id="military-spending">
+                    $0
+                </strong>
+
+                <p>
+                    Estimated military spending associated
+                    with recorded conflicts.
+                </p>
+
+            </article>
+
+
+            <article class="funding-card">
+
+                <span class="funding-label">
+                    WAR DEBT
+                </span>
+
+                <strong id="war-debt">
+                    $0
+                </strong>
+
+                <p>
+                    Government borrowing and debt financing.
+                </p>
+
+            </article>
+
+
+            <article class="funding-card">
+
+                <span class="funding-label">
+                    FOREIGN FUNDING
+                </span>
+
+                <strong id="foreign-funding">
+                    $0
+                </strong>
+
+                <p>
+                    External financial and military support.
+                </p>
+
+            </article>
+
+
+            <article class="funding-card">
+
+                <span class="funding-label">
+                    ECONOMIC DAMAGE
+                </span>
+
+                <strong id="economic-damage">
+                    $0
+                </strong>
+
+                <p>
+                    Estimated infrastructure and economic losses.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HISTORICAL TIMELINE
+    ====================================================== -->
+
+    <section class="dashboard-section timeline-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    HISTORY
+                </span>
+
+                <h2>
+                    Conflict Through Time
+                </h2>
+
+                <p>
+                    Navigate major conflicts across human history.
+                </p>
+
+            </div>
+
+            <a href="timeline.html" class="section-link">
+                Open Full Timeline →
+            </a>
+
+        </div>
+
+
+        <div class="timeline-container">
+
+            <div class="timeline-line"></div>
+
+            <div id="timeline-events">
+
+                <!-- Timeline events generated dynamically -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TOP CONFLICTS
+    ====================================================== -->
+
+    <section class="dashboard-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    COMPARATIVE DATA
+                </span>
+
+                <h2>
+                    Largest Conflicts by Estimated Deaths
+                </h2>
+
+            </div>
+
+            <a href="wars.html" class="section-link">
+                View All Conflicts →
+            </a>
+
+        </div>
+
+
+        <div class="war-ranking-table">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Rank
+                        </th>
+
+                        <th>
+                            Conflict
+                        </th>
+
+                        <th>
+                            Period
+                        </th>
+
+                        <th>
+                            Combatants
+                        </th>
+
+                        <th>
+                            Estimated Deaths
+                        </th>
+
+                        <th>
+                            Estimated Cost
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="war-ranking">
+
+                    <!-- Rows generated dynamically -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DATA EXPLORER
+    ====================================================== -->
+
+    <section class="dashboard-section explorer-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    DATA EXPLORER
+                </span>
+
+                <h2>
+                    Explore the Database
+                </h2>
+
+                <p>
+                    Filter conflicts by time period, geography,
+                    casualties, participants, and type.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="explorer-controls">
+
+            <div class="filter-group">
+
+                <label>
+                    Search
+                </label>
+
+                <input
+                    type="search"
+                    id="database-search"
+                    placeholder="Search conflicts or countries..."
+                >
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label>
+                    Era
+                </label>
+
+                <select id="era-filter">
+
+                    <option value="all">
+                        All Eras
+                    </option>
+
+                    <option value="ancient">
+                        Ancient
+                    </option>
+
+                    <option value="medieval">
+                        Medieval
+                    </option>
+
+                    <option value="early-modern">
+                        Early Modern
+                    </option>
+
+                    <option value="modern">
+                        Modern
+                    </option>
+
+                    <option value="contemporary">
+                        Contemporary
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label>
+                    Conflict Type
+                </label>
+
+                <select id="type-filter">
+
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="international">
+                        International
+                    </option>
+
+                    <option value="civil">
+                        Civil War
+                    </option>
+
+                    <option value="revolution">
+                        Revolution
+                    </option>
+
+                    <option value="colonial">
+                        Colonial
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label>
+                    Sort By
+                </label>
+
+                <select id="sort-filter">
+
+                    <option value="deaths">
+                        Estimated Deaths
+                    </option>
+
+                    <option value="start-date">
+                        Start Date
+                    </option>
+
+                    <option value="duration">
+                        Duration
+                    </option>
+
+                    <option value="cost">
+                        Economic Cost
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="database-results"
+            class="database-results"
+        >
+
+            <!-- Search results generated dynamically -->
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                <span class="logo-mark">
+                    WS
+                </span>
+
+                <span class="logo-text">
+                    WAR<span>STATS</span>
+                </span>
+            </div>
+
+            <p>
+                A data-driven exploration of warfare,
+                conflict, economics, and human history.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="wars.html">
+                    Wars
+                </a>
+
+                <a href="map.html">
+                    Global Map
+                </a>
+
+                <a href="countries.html">
+                    Countries
+                </a>
+
+                <a href="timeline.html">
+                    Timeline
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Analytics
+                </h4>
+
+                <a href="funding.html">
+                    War Funding
+                </a>
+
+                <a href="casualties.html">
+                    Casualties
+                </a>
+
+                <a href="economics.html">
+                    War Economics
+                </a>
+
+                <a href="technology.html">
+                    Military Technology
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="methodology.html">
+                    Methodology
+                </a>
+
+                <a href="sources.html">
+                    Data Sources
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            WarStats © 2026
+        </p>
+
+        <p>
+            Historical estimates may vary by source.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="script.js"></script>
+```
+
 </body>
 </html>
